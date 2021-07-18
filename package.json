@@ -1,0 +1,15 @@
+{
+  "name": "rest-shop",
+  "version": "1.0.0",
+  "description": "RESTful API for a Simple Shop",
+  "main": "index.js",
+  "scripts": {
+    "run": "index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ravi Shukla",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
