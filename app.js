@@ -1,9 +1,21 @@
 const express = require ('express');
 const morgan = require('morgan');
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
+const Product = require('./api/models/product');
+
+
+const connectDB = require('./config/db');
+
+dotenv.config({ path: './config/config.env'});
 
 const app = express();
+
+
+connectDB();
 
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}));
