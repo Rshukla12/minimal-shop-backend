@@ -66,7 +66,7 @@ router.get('/:orderId', (req, res, next) => {
 });
 
 router.delete('/:orderId', (req, res, next) => {
-    Order.remove({
+    Order.deleteOne({
         _id: req.params.ordertId
     })
     .exec()
